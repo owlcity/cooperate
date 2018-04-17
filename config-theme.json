@@ -1,0 +1,18 @@
+{
+    "@hd": "1px",
+    "@color-text-base": "#000",
+    "@color-text-base-inverse": "#fff",
+    "@color-text-secondary": "#a4a9b0",
+    "@color-text-placeholder": "#bbb",
+    "@color-text-disabled": "#bbb",
+    "@color-text-caption": "#888",
+    "@color-text-paragraph": "#333",
+    "@color-link": "@brand-primary",
+    "@brand-primary": "#ffc800",
+    "@brand-primary-tap": "#f3c10a",
+    "@brand-important": "#ff5b05",
+    "@brand-success": "#6abf47",
+    "@brand-warning": "#f96142",
+    "@brand-error": "#f4333c",
+    "@border-color-base": "#ddd"
+}
