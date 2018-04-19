@@ -5,9 +5,16 @@
 * @Last Modified time: 2018-04-12 13:43:11
 */
 body{background-color: #f5f5fa;color: #333}
+.bg-body{background-color:#f5f5fa};
 .full{width: 100%;}
-a:visited{
-    color: #333;
+a,a:visited{
+       color: #333; 
+}
+table {
+    border-collapse: collapse;
+    max-width: 100%;
+    background-color: transparent;
+    empty-cells: show;
 }
 @base-color:#FF7800;
 @white:#FFF;
@@ -15,7 +22,8 @@ a:visited{
 @orange:#FB9117;
 @green:#39b54a;
 @gray:#CCC;
-@black:#666;
+@black:#333;
+@lightgrey:#999;
 @red:#F96142;
 .border-radius(@radius:5px){
     border-radius:@radius;
@@ -31,7 +39,11 @@ a:visited{
 
 .tac{text-align: center!important;}
 .tal{text-align: left!important;}
-.tar{text-align: right!important}
+.tar{text-align: right!important;}
+.taj{text-align: justify};
+.border-top{
+    border-top:1px solid #ededed;
+}
 
 .white-color{color: @white}
 .white-bg{background-color:@white;}
@@ -45,6 +57,8 @@ a:visited{
 .green-bg{background-color:@green}
 .gray-color{color:@gray}
 .gray-bg{background-color:@gray}
+.lightgrey-color{color:@lightgrey}
+.lightgrey-bg{background-color:@lightgrey}
 .fz12{font-size: 12px}
 .fz13{font-size: 13px}
 .fz14{font-size: 14px}
@@ -55,13 +69,29 @@ a:visited{
 .fz24{font-size: 24px}
 .fz28{font-size: 28px}
 .fz32{font-size: 32px}
+.pr{position: relative}
+.pa{position: absolute}
 .fl{float:left}
 .fr{float:right}
+.flex{display: flex;}
+.item-center{
+    .flex;
+    align-items: center;
+}
+.justify-center{
+    .flex;
+    justify-content: center;
+}
+.flex-center{
+    .item-center;
+    .justify-center;
+}
 .inline-block{display: inline-block}
 .ellipsis{word-wrap:normal;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
 
 .margin{margin:1.6rem}
 .margin-0{margin:0!important}
+
 .margin-xs{margin:.5rem}
 .margin-sm{margin:1rem}
 .margin-lg{margin:2.4rem}
@@ -145,6 +175,9 @@ a:visited{
 .padding-right-lg{padding-right:2.4rem}
 .padding-right-xl{padding-right:3.2rem}
 .cover{background-position:50% 50%;background-repeat: no-repeat;-webkit-background-size: 100% 100%;background-size: 100% 100%;}
+.icon{
+    vertical-align: -3px; //出现文字与icon 上下对其
+}
 // tabbar
 .tabbar{position: fixed; height:100%;;width:100%;top: 0}
 .tab-icon{width: 21px;height: 21px;background-position: 50% 50%;background-repeat:no-repeat;background-size:100% 100%;}
@@ -171,11 +204,18 @@ a:visited{
     .border-radius(100px);
 }
 .btn-sm{
+    display: block;
     height: 26px;
     line-height: 26px;
     .white-color;
     .fz12;
     .border-radius(100px);
+    &:visited{
+        .white-color;
+    }
+}
+.am-button-primary::before {
+    border:none!important;
 }
 .mask-opacity{
     opacity: .5;
@@ -190,5 +230,79 @@ a:visited{
     height: 40px;
     line-height: 40px;
 }
-
-
+.progress-state-1 .am-progress-bar{
+    border-color: #FFC800
+}
+// 项目详情
+.tip{
+    .inline-block;
+    background-color: #FAF2E5;
+    color: #876A4E;
+    padding: 5px 7px;
+}
+.progress-font{
+    position: absolute;
+    background-color: #FF7800;
+    color: #fff;
+    height: 18px;
+    line-height: 18px;
+    width: 40px;
+    top: 50%;
+    margin-top: -9px;
+    font-size: 12px;
+    margin-left: -20px;
+    .border-radius(100px);
+}
+.tip-suggest{
+    font-size: 12px;
+    color: #d95336;
+    background-color:#fff6f5;
+    line-height: 30px;
+}
+.table table{
+    .full;
+}
+.table table tr td{
+    padding: 10px 5px;
+    .tal;
+}
+.table table tr td:nth-of-type(1){
+    color: #666;
+}
+.statement{
+    background-color:#fafafa;
+    color: #aa9a8c;
+    line-height: 1.8;
+    padding:12px;
+    .taj;
+    .fz12;
+}
+.list .am-list-body::before,.list .am-list-body::after{
+    background-color: #fff!important;
+}
+.list .am-list-line .am-list-content{
+    .fz14;
+}
+.calc-button{
+    width: 80px;
+    height: 40px;
+    margin-right: -8px;
+    border-radius:100px 0 0 100px;
+    background: linear-gradient(to right,#ffbe00,#ff8f00);
+    text-align: center;
+}
+// 项目详情
+.project-table table tr td{
+    border: 1px solid #ececec;
+    padding: 10px;
+    .taj;
+}
+.project-table table tr:nth-of-type(odd){
+    background-color: #fafafa;
+    color: #999;
+}
+.extra-color{
+    .am-list-extra{
+        color: #333!important;
+    }
+}

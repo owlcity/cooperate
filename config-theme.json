@@ -8,7 +8,7 @@
     "@color-text-caption": "#888",
     "@color-text-paragraph": "#333",
     "@color-link": "@brand-primary",
-    "@brand-primary": "#ffc800",
+    "@brand-primary": "#333",
     "@brand-primary-tap": "#f3c10a",
     "@brand-important": "#ff5b05",
     "@brand-success": "#6abf47",

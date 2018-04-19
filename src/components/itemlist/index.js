@@ -2,7 +2,7 @@
  * Created by zk on 2018/4/16
  */
 import React from 'react';
-import { Route,Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Flex,Button,Progress,Badge } from 'antd-mobile';
 export default class ItemList extends React.Component{
     render(){
@@ -15,7 +15,7 @@ export default class ItemList extends React.Component{
                   <Badge text="吉" style={{ marginRight:10, padding: '0 3px', backgroundColor: '#39b54a', borderRadius: 2, }} />
                   <Link to="/project" >
                     售后回租
-                  </Link>
+                  </ Link>
                   <Badge text="币" style={{ marginLeft:4, padding: '0 3px', backgroundColor: '#FF7800', borderRadius: 2, }} />
                   <Badge text="券" style={{ marginLeft:4, padding: '0 3px', backgroundColor: '#FF7800', borderRadius: 2, }} />
                   <Badge text="福" style={{ marginLeft:4, padding: '0 3px', backgroundColor: '#FF7800', borderRadius: 2, }} />
@@ -37,12 +37,12 @@ export default class ItemList extends React.Component{
                     </Flex.Item>
                     <Flex.Item>
                         <div className="inline-block item-top" style={{width:"80px"}} >
-                            <Link to="/project" >
-                            <Button className="btn-sm" type="primary">出借</Button>
+                            <Link className="btn-sm yellow-bg"  to="/project" >
+                            出借
                             </Link>
                             <Button className="orange-bg btn-sm" type="primary">15:00发布</Button>
-                            <Button className="gray-bg btn-sm" type="primary">15:00发布</Button>
-                            <Progress className="radius-circle margin-top-xs" percent={40} position="normal"  />
+                            <Button className="gray-bg btn-sm" type="primary">满标</Button>
+                            <Progress className="radius-circle margin-top-xs progress-state-1" percent={40} position="normal"  />
                         </div>
                         <div className="fz12 gray-color margin-top-xs">剩余18.3万</div>
                         <div className="fz12 orange-color margin-top-xs">左划开启自动出借</div>
