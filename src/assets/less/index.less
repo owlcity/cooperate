@@ -87,6 +87,9 @@ table {
     .justify-center;
 }
 .inline-block{display: inline-block}
+.hide{
+    display: none;
+}
 .ellipsis{word-wrap:normal;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
 
 .margin{margin:1.6rem}
@@ -214,6 +217,17 @@ table {
         .white-color;
     }
 }
+.btn-lg{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    .white-color;
+    .fz14;
+    .border-radius(100px);
+    &:visited{
+        .white-color;
+    }
+}
 .am-button-primary::before {
     border:none!important;
 }
@@ -306,3 +320,8 @@ table {
         color: #333!important;
     }
 }
+// 计算器
+.calculate-input .am-input-label.am-input-label-5,.calculate-input .am-input-control input,.calculate-input .am-list-item .am-list-line .am-list-content,.calculate-input .am-list-item .am-list-line .am-list-extra{
+    .fz14;
+}
+

@@ -4,7 +4,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { NavBar,Icon,WhiteSpace,PickerView } from 'antd-mobile';
+import { NavBar,Icon,WhiteSpace,PickerView,Button,Slider } from 'antd-mobile';
 
 const days = [
   [
@@ -27,18 +27,30 @@ const days = [
     {
       label: '360',
       value: '360',
-    },
+    }
   ]
 ];
 export default class Calculator extends React.Component{
     state = {
-        value: null,
+        value: 90,
+        slideValue: 1000
+    }
+    slideVal = (name) => {
+        return (value) => {
+          // console.log( `${name}+${value}`);
+          this.setState({
+            slideValue : value
+          })
+        };
     }
     onChange = (value) => {
         console.log(value);
         this.setState({
-          value,
+          value
         });
+    }
+    componentDidMount(){
+        document.querySelector(".am-picker-col-content").style.transform = "translate3d(0px, -68px, 0px)";
     }
     render(){
         return(
@@ -64,17 +76,31 @@ export default class Calculator extends React.Component{
 
                 <WhiteSpace className="bg-body" size="sm" />
                 <div className="white-bg padding-sm tac">
-                    <div className="fz12 lightgrey-color">借款期限</div>
+                    <div className="fz12 lightgrey-color">借款期限（天）</div>
                     <PickerView
                         onChange={this.onChange}
                         value={this.state.value}
                         data={days}
-                        cols={110}
                         cascade={false}
                       />
-                    <div className="fz12 lightgrey-color border-top padding-vertical-sm">投资金额</div>
+                    <div className="fz12 lightgrey-color border-top padding-vertical-sm margin-top">投资金额（元）</div>
                     <div className="fz32 black-color margin-top-xs">
-                        1000
+                        {this.state.slideValue}
+                    </div>
+                    <div className="padding padding-vertical-xl">
+                    <Slider
+                        defaultValue={1000}
+                        min={0}
+                        max={10000}
+                        step={100}
+                        onChange={this.slideVal('change')}
+                        onAfterChange={this.slideVal('afterChange')}
+                      />
+                    </div>
+                    <div className="margin-sm margin-bottom-xl">
+                        <Button className="btn-lg yellow-bg">
+                            按此方案购买
+                        </Button>
                     </div>
                 </div>
 

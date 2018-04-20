@@ -11,18 +11,18 @@ export default class TrainCamp extends React.Component{
                 <div className="tac fz16">新手训练营</div>
                 <Flex  align="start" className="train-con tac">
                     <Flex.Item className="mask-opacity">
-                        <img alt="" src={require("assets/images/home/new_reward1.png")} />
+                        <img alt="" src={require("assets/images/home/new_reward.jpg")} />
                         <div>50金币</div>
                     </Flex.Item>
                     <Flex.Item>
-                        <img alt="" src={require("assets/images/home/new_reward1.png")} />
+                        <img alt="" src={require("assets/images/home/new_reward.jpg")} />
                         <div>50金币</div>
                         <div>
                             <Button className="btn-md margin-top-sm" type="warning">绑卡领金币</Button>
                         </div>
                     </Flex.Item>
                     <Flex.Item className="grayscale">
-                        <img alt="" src={require("assets/images/home/new_reward1.png")} />
+                        <img alt="" src={require("assets/images/home/new_reward.jpg")} />
                         <div>50金币</div>
                     </Flex.Item>
                 </Flex>
