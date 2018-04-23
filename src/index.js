@@ -8,8 +8,11 @@ import Info from '@/pages/project/info';
 import Risk from '@/pages/project/risk';
 import Use from '@/pages/project/use';
 import Records from '@/pages/project/records';
+import Invest from '@/pages/project/invest';
+import InvestSuccess from '@/pages/project/success';
 import Calculator from '@/pages/calculator/major';
 import Relax from '@/pages/calculator/relax';
+import CalcValue from '@/pages/calculator/result';
 
 
 import "assets/less/index.less";
@@ -21,6 +24,8 @@ class App extends React.Component{
                 <div>
                     <Route exact path="/" component={Tab} />
                     <Route exact path="/project" component={Project} />
+                    <Route path="/project/invest" component={Invest} />
+                    <Route path="/project/success" component={InvestSuccess} />
                     <Route path="/project/borrower" component={Borrower} />
                     <Route path="/project/info" component={Info} />
                     <Route path="/project/risk" component={Risk} />
@@ -28,6 +33,7 @@ class App extends React.Component{
                     <Route path="/project/records" component={Records} />
                     <Route path="/calculator/major" component={Calculator} />
                     <Route path="/calculator/relax" component={Relax} />
+                    <Route path="/calculator/result" component={CalcValue} />
                 </div>
             </Router>
         );

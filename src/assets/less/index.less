@@ -24,7 +24,7 @@ table {
 @gray:#CCC;
 @black:#333;
 @lightgrey:#999;
-@red:#F96142;
+@red:#DA6F58;
 .border-radius(@radius:5px){
     border-radius:@radius;
 }
@@ -34,6 +34,9 @@ table {
 
 .circle{
     .border-radius(50%);
+}
+.radius-2{
+    .border-radius(2px);
 }
 
 
@@ -47,6 +50,7 @@ table {
 
 .white-color{color: @white}
 .white-bg{background-color:@white;}
+.bark-bg{background-color:@black;}
 .red-color{color:@red}
 .red-bg{background-color:@red}
 .yellow-color{color:@yellow}
@@ -59,6 +63,7 @@ table {
 .gray-bg{background-color:@gray}
 .lightgrey-color{color:@lightgrey}
 .lightgrey-bg{background-color:@lightgrey}
+.success-bg{background-color:#c86854}
 .fz12{font-size: 12px}
 .fz13{font-size: 13px}
 .fz14{font-size: 14px}
@@ -89,6 +94,9 @@ table {
 .inline-block{display: inline-block}
 .hide{
     display: none;
+}
+.oh{
+    overflow: hidden;
 }
 .ellipsis{word-wrap:normal;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
 
@@ -210,6 +218,7 @@ table {
     display: block;
     height: 26px;
     line-height: 26px;
+    .tac;
     .white-color;
     .fz12;
     .border-radius(100px);
@@ -221,6 +230,7 @@ table {
     display: block;
     height: 40px;
     line-height: 40px;
+    .tac;
     .white-color;
     .fz14;
     .border-radius(100px);
@@ -278,9 +288,11 @@ table {
 }
 .table table tr td{
     padding: 10px 5px;
-    .tal;
 }
-.table table tr td:nth-of-type(1){
+.gray-table table tr td{
+    text-align: left;
+}
+.gray-table table tr td:nth-of-type(1){
     color: #666;
 }
 .statement{
@@ -324,4 +336,40 @@ table {
 .calculate-input .am-input-label.am-input-label-5,.calculate-input .am-input-control input,.calculate-input .am-list-item .am-list-line .am-list-content,.calculate-input .am-list-item .am-list-line .am-list-extra{
     .fz14;
 }
-
+// 投资成功返回
+.line-font{
+    .pr;
+}
+.line-font:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color:#ececec;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+.line-font span{
+    position: relative;
+    background-color:#fff;
+    color: #bbb;
+    padding: 0 15px;
+}
+.goods-item{
+    .flex;
+    padding: '15px 0';
+}
+.goods-item-img{
+    width: 64px;
+    height: 64px;
+    margin-right: 15px;
+    padding: 4px;
+    border:1px solid #dcdcdc;
+}
+.goods-item{
+    box-shadow: 0 0 3px #d8d8d8;
+    padding: 18px 15px;
+    margin-bottom: 10px;
+    .radius-2;
+}

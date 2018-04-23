@@ -3,11 +3,10 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Picker,List,NavBar,Icon,InputItem, Switch, Button } from 'antd-mobile';
+import { Picker,List,NavBar,Icon,InputItem, Switch } from 'antd-mobile';
 import { createForm } from 'rc-form';
-
-
 const Item = List.Item;
+
 const district =  [
     {
       label: '先息后本',
@@ -98,9 +97,10 @@ const district =  [
                         </div>
                     </List>
                     <div className="padding-sm padding-bottom-xl">
-                        <Button className="btn-lg yellow-bg">
-                            按此方案购买
-                        </Button>
+
+                        <Link to="/calculator/result" className="btn-lg yellow-bg">
+                            开始计算
+                        </Link>
                     </div>
                 </div>
 
@@ -108,12 +108,6 @@ const district =  [
         )
     }
 }
-// onClick={(checked) => { 
-//                                     if(checked){
-//                                         document.querySelector(".toggle-con").style.display = "block"
-//                                     }else{
-//                                         document.querySelector(".toggle-con").style.display = "none"
-//                                     }
-//                                    }}
+
 const Calculator = createForm()(Calculatorss);
 export default Calculator;

@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { NavBar,Icon,Progress,Flex,Badge,WhiteSpace,List,Button } from 'antd-mobile';
+import { NavBar,Icon,Progress,Flex,Badge,WhiteSpace,List } from 'antd-mobile';
 import Statement from 'components/statement';
 const Item = List.Item;
 
@@ -57,7 +57,7 @@ export default class Project extends React.Component {
                         </Flex.Item>
                     </Flex>
                     <div className="tip-suggest margin-top">投资人条件：建议风险承受能力“稳健型”及以上</div>
-                    <div className="table margin-sm">
+                    <div className="table gray-table margin-sm">
                         <table>
                             <tbody>
                             <tr>
@@ -131,7 +131,7 @@ export default class Project extends React.Component {
                         </div>
                         </Link>
                         <Flex.Item>
-                        <Button type="primary" style={{"backgroundColor":"#ff7800","borderRadius":"0 100px 100px 0","height":"40px","lineHeight":"40px","fontSize":"16px"}} >出借</Button>
+                        <Link className="btn-lg" to="/project/invest" type="primary" style={{"backgroundColor":"#ff7800","borderRadius":"0 100px 100px 0","height":"40px","lineHeight":"40px","fontSize":"16px"}} >出借</Link>
                         </Flex.Item>
                     </Flex>
                 </div>
