@@ -2,7 +2,8 @@
  * Created by zk on 2018/4/23
  */
 import React from 'react';
-import { Flex,List,InputItem,NavBar,Icon,WhiteSpace,Picker,Switch,Button } from 'antd-mobile';
+import { Link } from 'react-router-dom';
+import { Flex,List,InputItem,NavBar,Icon,WhiteSpace,Picker,Switch } from 'antd-mobile';
 import { createForm } from 'rc-form';
 const Item = List.Item;
 
@@ -110,7 +111,7 @@ class InvestPage extends React.Component{
                             </div>
                         </Flex.Item>
                         <div className="flex-center" style={{"width":"100px"}}>
-                            <Button className="orange-bg btn-lg full" type="primary">确认</Button>
+                            <Link to="/project/success"className="orange-bg btn-lg full" type="primary">确认</Link>
                         </div>
                     </Flex>
                 </div>

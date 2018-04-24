@@ -2,7 +2,9 @@
  * Created by zk on 2018/4/23
  */
 import React from 'react';
-import { Modal,Icon,Button } from 'antd-mobile';
+import { ActionSheet,Modal,Icon,Button,Toast } from 'antd-mobile';
+
+// 对话框 红包弹出
 function closest(el, selector) {
   const matchesSelector = el.matches || el.webkitMatchesSelector || el.mozMatchesSelector || el.msMatchesSelector;
   while (el) {
@@ -13,12 +15,14 @@ function closest(el, selector) {
   }
   return null;
 }
-
+// 分享好友
 export default class InvestSuccess extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
           modal: false,
+          show: true, //红包弹出
+          clicked: 'none', //分享好友
         };
     }
     showModal = key => (e) => {
@@ -30,6 +34,7 @@ export default class InvestSuccess extends React.Component{
     onClose = key => () => {
         this.setState({
           [key]: false,
+          show:false
         });
     }
     onWrapTouchStart = (e) => {
@@ -41,6 +46,32 @@ export default class InvestSuccess extends React.Component{
         if (!pNode) {
           e.preventDefault();
         }
+    }
+    // 好友分享
+    dataList = [
+        { url: 'OpHiXAcYzmPQHcdlLFrc', title: '发送给朋友' },
+        { url: 'wvEzCMiDZjthhAOcwTOu', title: '新浪微博' },
+        { url: 'cTTayShKtEIdQVEMuiWt', title: '生活圈' },
+        { url: 'umnHwvEgSyQtXlZjNJTt', title: '微信好友' },
+        { url: 'SxpunpETIwdxNjcJamwB', title: 'QQ' },
+    ].map(obj => ({
+        icon: <img src={`https://gw.alipayobjects.com/zos/rmsportal/${obj.url}.png`} alt={obj.title} style={{ width: 36 }} />,
+        title: obj.title,
+    }));
+    showShareActionSheet = () => {
+        ActionSheet.showShareActionSheetWithOptions({
+          options: this.dataList,
+          // title: 'title',
+          message: '10个红包分享给好友',
+        },
+        (buttonIndex) => {
+          this.setState({ clicked: buttonIndex > -1 ? this.dataList[buttonIndex].title : 'cancel' });
+          // also support Promise
+          return new Promise((resolve) => {
+            Toast.info('closed after 1000ms');
+            setTimeout(resolve, 1000);
+          });
+        });
     }
 
     render(){
@@ -121,25 +152,25 @@ export default class InvestSuccess extends React.Component{
                 </div>
 
                 <Modal
-                  visible={true}
+                  visible={this.state.show}
                   transparent
+                  closable={true}
                   maskClosable={false}
                   onClose={this.onClose('modal')}
                   title={
                         <span className="fz16">交易成功分享红包</span>
                   }
-                  footer={[{ text: '关闭', onPress: () => { console.log('ok'); this.onClose('modal')(); } }]}
                   wrapProps={{ onTouchStart: this.onWrapTouchStart }}
                 >
-                  <div style={{ height: 142, overflow: 'scroll' }}>
-                    <div className="red-color margin-vertical-sm">
+                  <div style={{ height: 152, overflow: 'scroll' }}>
+                    <div className="red-color margin-vertical-xs">
                         恭喜获得10个红包
                     </div>
-                    <div className="gray-color">
+                    <div className="gray-color padding-vertical-sm">
                         分享好友可用于抵现哦
                     </div>
                     <div className="padding-horizontal">
-                        <Button className="btn-lg margin-top-sm" type="warning">分享好友</Button>
+                        <Button className="btn-lg margin-top-sm" type="warning" onClick={this.showShareActionSheet}>分享好友</Button>
                     </div>
                   </div>
                 </Modal>

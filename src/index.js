@@ -13,6 +13,7 @@ import InvestSuccess from '@/pages/project/success';
 import Calculator from '@/pages/calculator/major';
 import Relax from '@/pages/calculator/relax';
 import CalcValue from '@/pages/calculator/result';
+import Fail from '@/pages/result/fail';
 
 
 import "assets/less/index.less";
@@ -34,6 +35,7 @@ class App extends React.Component{
                     <Route path="/calculator/major" component={Calculator} />
                     <Route path="/calculator/relax" component={Relax} />
                     <Route path="/calculator/result" component={CalcValue} />
+                    <Route path="/result/fail" component={Fail} />
                 </div>
             </Router>
         );
