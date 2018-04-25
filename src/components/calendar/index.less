@@ -1,0 +1,68 @@
+/*
+* @Author: owlcity
+* @Date:   2018-04-25 13:32:21
+* @Last Modified by:   owlcity
+* @Last Modified time: 2018-04-25 13:32:21
+*/
+.calendar-wrap ul,li,p{list-style: none;list-style-type: none;padding: 0;margin: 0;}
+
+        .headerborder{
+            height:55px;
+            line-height: 50px;
+            text-align: center;
+            position: relative;
+        }
+        .triangle-left {
+            position: absolute;
+            width: 0;
+            height: 0;
+            top:18px;
+            left: 20px;
+            border-top: 8px solid transparent;
+            border-right: 16px solid #00C2B1;
+            border-bottom: 8px solid transparent;
+            cursor: pointer;
+        }
+        .triangle-right {
+            position: absolute;
+            width: 0;
+            height: 0;
+            top:18px;
+            right: 20px;
+            border-top: 8px solid transparent;
+            border-left: 16px solid #00C2B1;
+            border-bottom: 8px solid transparent;
+             cursor: pointer;
+        }
+
+        .ul-box{
+            overflow: hidden;
+        }
+        .ul-box > li{
+            float: left;
+            width: 14.28%;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 13px;
+        }
+        .dayStyle{
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            cursor: pointer;
+        }
+        .current-month > .dayStyle:hover{
+            background: #00BDFF;
+            color: #ffffff;
+        }
+        .curToday{
+            background: #00C2B1;
+            color: #fff;
+        }
+        .weekday{font-weight: 700;color:#FF7800;}
+        .calender-info{
+            
+        }

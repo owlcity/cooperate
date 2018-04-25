@@ -12,9 +12,7 @@ export default class Tab extends React.Component {
         };
     }
 
-  render(children) {
-    // const pathname = children.props.location.pathname;
-    console.log(children);
+  render() {
     return (
       <div className="tabbar" >
         <TabBar

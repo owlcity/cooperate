@@ -2,7 +2,6 @@
  * Created by zk on 2018/4/24
  */
 import React from 'react';
-import img from "assets/images/icon/exclamation.svg"
 import { Button } from 'antd-mobile';
 
 export default class Fail extends React.Component{
