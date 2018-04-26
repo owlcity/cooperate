@@ -4,6 +4,20 @@
 import React from 'react';
 import { Badge } from 'antd-mobile';
 import './index.less'
+const data = [
+    {"date":"20180302","project":"喜羊","money":"218.91"},
+    {"date":"20180321","project":"喜羊","money":"218.91"},
+    {"date":"20180401","project":"喜羊","money":"218.91"},
+    {"date":"20180408","project":"乐羊","money":"2218.91"},
+    {"date":"20180424","project":"吉羊","money":"2018.91"},
+    {"date":"20180427","project":"喜ss羊","money":"18.91"},
+    {"date":"20180430","project":"喜zz羊","money":"218.91"}
+]
+var timeArr = [];
+for(var j=0;j<data.length;j++){
+    timeArr.push(data[j].date);
+}
+console.log(timeArr);
 class CalendarHeader extends React.Component{
     constructor(props) {
         super(props);
@@ -57,24 +71,33 @@ class CalendarHeader extends React.Component{
     }
 }
 class CalendarBody extends React.Component{
+    getCurYear(){
+        return this.props.year;
+    }
+    getCurMonth(){
+        return this.props.month;
+    }
+    getCurDay(){
+        return this.props.day;
+    }
     getMonthDays(){
        //根据月份获取当前天数
-        var year = this.props.year,
-            month = this.props.month;
+        var year = this.getCurYear(),
+            month = this.getCurMonth();
         var temp = new Date(year,month,0); 
         return temp.getDate(); 
     }
     getFirstDayWeek(){
         //获取当月第一天是星期几
-        var year = this.props.year,
-            month = this.props.month;   
+        var year = this.getCurYear(),
+            month = this.getCurMonth();   
         var dt = new Date(year+'/'+month+'/1');
         var Weekdays = dt.getDay();
         return Weekdays;    
     }
 
     render(){
-        var arry1 = [],arry2 = [];
+        var arry1 = [],arry2 = [],arryDate=[];
         var getDays = this.getMonthDays(),
             FirstDayWeek = this.getFirstDayWeek(),
             curday = this.props.day ;
@@ -83,14 +106,44 @@ class CalendarBody extends React.Component{
             }
             for(let i = 0 ;i < getDays; i++ ){
                 arry2[i] = (i+1);
+                arryDate[i] = this.getCurYear() + ('0'+this.getCurMonth()).slice(-2)+('0'+(i+1)).slice(-2);
             }
-            
+            console.log(arryDate);
         var node1 = arry1.map(function(item,i){
             return <li key={i}></li> // 这里不能加引号，因为要返回HTML标签，而不是html字符串，
                             //这是JSX语法 HTML 语言直接写在 JavaScript 语言之中，不加任何引号。
         })
+
+        // 获取当前年月
+        
+        // console.log(arry2);
         var node2 = arry2.map(function(item,i){
-            return (curday === item)?<li key={i}><span className="dayStyle curToday">{item}</span></li>: <li key={i}><span className="dayStyle">{item}</span></li>
+            if(curday === item){
+                return (
+                    <li key={i}><span className="dayStyle curToday">{item}</span></li>
+                )
+            }else{
+                console.log(timeArr.indexOf(arryDate[i]))
+                if(timeArr.indexOf(arryDate[i])){
+                    return(
+                        <li key={i}>
+                            <span className="dayStyle hasDay" data={arryDate[i]}>
+                                {item}
+                            </span>
+                        </li>
+                    )
+                }else{
+                    return(
+                        <li key={i}>
+                            <span className="dayStyle" data={arryDate[i]}>
+                                {item}
+                            </span>
+                        </li>
+                    )
+                }
+                
+            }
+
         })
 
         return(
@@ -200,9 +253,9 @@ export default class Calendar extends React.Component{
                     <div className="border-top padding-sm margin-top tac">
                         下一回款
                     </div>
-                    <div className="calender-info padding-sm">
-                        <Badge text="8/26" style={{ height:'26px',margin:'0 10px 0 4px',fontSize:'14px', padding: '4px 14px', backgroundColor: '#FF7800', borderRadius: 100, }} />
-                        <strong>喜羊贸易融租</strong>
+                    <div className="calender-info radius-circle">
+                        <Badge text="8/26" style={{ height:'32px',marginRight:'10px',fontSize:'16px', padding: '7px 13px', backgroundColor: '#FF7800', borderRadius: 100, }} />
+                        <strong>喜羊贸易融租48期</strong>
                         <span className="orange-color fr fz16">81.75元</span>
 
                  </div>
