@@ -7,27 +7,20 @@ import Calendar from 'components/calendar';
 import { WhiteSpace,List } from 'antd-mobile';
 const Item = List.Item;
 const Brief = Item.Brief;
-export default class Asset extends React.Component{
+export default class Profit extends React.Component{
 
     render(){
         return(
             <div className="white-bg">
                 <div className="yellow-bg padding-vertical padding-bottom-xl tac">
-                    <div className="white-color text-shadow">
-                        本月待回款
-                    </div>
-                    <div className="white-color text-shadow fz24 padding-vertical">
-                        29102.21
-                    </div>
-                    <div className="white-color text-shadow">
-                        本月已回款 290.21元
-                    </div>
-                </div>
 
-                <div className="calendar-wrap margin-sm white-bg">
-                    <Calendar />
+                    <div className="white-color text-shadow fz24 padding-vertical">
+                        暂无收益
+                    </div>
+                    <div className="white-bg btn-md yellow-color" style={{'width':'180px','margin':'0 auto'}} >
+                        赚钱的脚步不能停 &gt;
+                    </div>
                 </div>
-                <WhiteSpace className="bg-body" size="sm" />
                 <List className="list my-list fz14">
                     <Item multipleLine extra={
                         <div>
@@ -49,10 +42,8 @@ export default class Asset extends React.Component{
                             102012.89 <span className="fz12 bark-color">元</span>
                         </div>
                     }>
-                        <Link to="/profit" >
-                            <img alt="" src={require("assets/images/icon/asset.png")} />
-                            <span className="fz14">总资产</span>
-                        </Link>
+                        <img alt="" src={require("assets/images/icon/asset.png")} />
+                        <span className="fz14">总资产</span>
                     </Item>
                     <Item arrow="horizontal">
                         <img alt="" src={require("assets/images/icon/calendar.png")} />

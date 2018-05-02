@@ -5,19 +5,21 @@ import React from 'react';
 import { Badge } from 'antd-mobile';
 import './index.less'
 const data = [
-    {"date":"20180302","project":"喜羊","money":"218.91"},
-    {"date":"20180321","project":"喜羊","money":"218.91"},
-    {"date":"20180401","project":"喜羊","money":"218.91"},
-    {"date":"20180408","project":"乐羊","money":"2218.91"},
-    {"date":"20180424","project":"吉羊","money":"2018.91"},
-    {"date":"20180427","project":"喜ss羊","money":"18.91"},
-    {"date":"20180430","project":"喜zz羊","money":"218.91"}
+    {"date":"20180402","project":"喜羊","money":"218.91"},
+    {"date":"20180421","project":"喜羊","money":"218.91"},
+    {"date":"20180501","project":"喜羊","money":"218.91"},
+    {"date":"20180508","project":"乐羊","money":"2218.91"},
+    {"date":"20180524","project":"吉羊","money":"2018.91"},
+    {"date":"20180527","project":"喜ss羊","money":"18.91"},
+    {"date":"20180530","project":"喜zz羊","money":"218.91"}
 ]
-var timeArr = [];
-for(var j=0;j<data.length;j++){
-    timeArr.push(data[j].date);
+var dataArr = [];
+for(var i=0;i<data.length;i++){
+    dataArr.push(data[i].date);
 }
-console.log(timeArr);
+console.log(dataArr);
+
+
 class CalendarHeader extends React.Component{
     constructor(props) {
         super(props);
@@ -95,7 +97,13 @@ class CalendarBody extends React.Component{
         var Weekdays = dt.getDay();
         return Weekdays;    
     }
+    componentDidMount(){
+        // data[j].date
+        // for(var j=0;j<data.length;j++){
+        //     document.getElementById("#20180401").style.transform = "translate3d(0px, -68px, 0px)"
+        // }
 
+    }
     render(){
         var arry1 = [],arry2 = [],arryDate=[];
         var getDays = this.getMonthDays(),
@@ -115,37 +123,26 @@ class CalendarBody extends React.Component{
         })
 
         // 获取当前年月
-        
         // console.log(arry2);
         var node2 = arry2.map(function(item,i){
             if(curday === item){
                 return (
-                    <li key={i}><span className="dayStyle curToday">{item}</span></li>
+                    <li key={i}><span className="dayStyle curToday" id={arryDate[i]}>{item}</span></li>
                 )
-            }else{
-                console.log(timeArr.indexOf(arryDate[i]))
-                if(timeArr.indexOf(arryDate[i])){
+            }
+            else{
                     return(
-                        <li key={i}>
-                            <span className="dayStyle hasDay" data={arryDate[i]}>
-                                {item}
-                            </span>
-                        </li>
+                    <li key={i}>
+                        <span className="dayStyle" id={arryDate[i]}>
+                            {item}
+                        </span>
+                    </li>
                     )
-                }else{
-                    return(
-                        <li key={i}>
-                            <span className="dayStyle" data={arryDate[i]}>
-                                {item}
-                            </span>
-                        </li>
-                    )
-                }
                 
             }
 
         })
-
+        
         return(
             <div>
                 <div className="weekday">
@@ -234,7 +231,7 @@ export default class Calendar extends React.Component{
             month: filterMonth
         });
     }
-
+    
     render(){
         return(
             <div className="calendarBorder"  >
