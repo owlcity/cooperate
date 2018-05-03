@@ -3,8 +3,7 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Calendar from 'components/calendar';
-import { WhiteSpace,List } from 'antd-mobile';
+import { NavBar,Icon,WhiteSpace,List } from 'antd-mobile';
 const Item = List.Item;
 const Brief = Item.Brief;
 export default class Profit extends React.Component{
@@ -12,6 +11,14 @@ export default class Profit extends React.Component{
     render(){
         return(
             <div className="white-bg">
+                <NavBar
+                  mode="light"
+                  icon={<Icon type="left" />}
+                  onLeftClick={() => window.history.go(-1)}
+                >
+                    <span className="fz16">我的账户</span>
+                </NavBar>
+
                 <div className="yellow-bg padding-vertical padding-bottom-xl tac">
 
                     <div className="white-color text-shadow fz24 padding-vertical">

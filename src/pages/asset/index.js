@@ -7,8 +7,16 @@ import Calendar from 'components/calendar';
 import { WhiteSpace,List } from 'antd-mobile';
 const Item = List.Item;
 const Brief = Item.Brief;
-export default class Asset extends React.Component{
 
+
+export default class Asset extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+          show: true, //红包弹出
+        };
+    }
+    
     render(){
         return(
             <div className="white-bg">
@@ -44,12 +52,18 @@ export default class Asset extends React.Component{
                       <Brief className="bark-color">2018.88</Brief>
                     </Item>
                     
+                    <Item arrow="horizontal">
+                        <Link to="/profit" >
+                            <img alt="" src={require("assets/images/icon/asset.png")} />
+                            <span className="fz14">待收收益</span>
+                        </Link>
+                    </Item>
                     <Item arrow="horizontal"  extra={
                         <div className="bark-color">
                             102012.89 <span className="fz12 bark-color">元</span>
                         </div>
                     }>
-                        <Link to="/profit" >
+                        <Link to="/total" >
                             <img alt="" src={require("assets/images/icon/asset.png")} />
                             <span className="fz14">总资产</span>
                         </Link>
@@ -68,6 +82,7 @@ export default class Asset extends React.Component{
                     </Item>
                 </List>
                 <WhiteSpace className="bg-body" size="lg" />
+  
             </div>
         )
     }

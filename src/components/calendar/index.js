@@ -17,7 +17,7 @@ var dataArr = [];
 for(var i=0;i<data.length;i++){
     dataArr.push(data[i].date);
 }
-console.log(dataArr);
+// console.log(dataArr);
 
 
 class CalendarHeader extends React.Component{
@@ -116,7 +116,7 @@ class CalendarBody extends React.Component{
                 arry2[i] = (i+1);
                 arryDate[i] = this.getCurYear() + ('0'+this.getCurMonth()).slice(-2)+('0'+(i+1)).slice(-2);
             }
-            console.log(arryDate);
+            // console.log(arryDate);
         var node1 = arry1.map(function(item,i){
             return <li key={i}></li> // 这里不能加引号，因为要返回HTML标签，而不是html字符串，
                             //这是JSX语法 HTML 语言直接写在 JavaScript 语言之中，不加任何引号。
