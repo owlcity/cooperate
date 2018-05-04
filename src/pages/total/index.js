@@ -3,10 +3,8 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Flex,NavBar,Icon,WhiteSpace,List } from 'antd-mobile';
+import { Flex,NavBar,Icon,WhiteSpace } from 'antd-mobile';
 import { Chart, Axis, Geom, Tooltip  } from 'bizcharts';
-const Item = List.Item;
-const Brief = Item.Brief;
 // 数据源
 const data = [
   { month: "1月", value: 100 },
@@ -31,11 +29,11 @@ export default class Total extends React.Component{
                   mode="light"
                   icon={<Icon type="left" />}
                   onLeftClick={() => window.history.go(-1)}
-                  rightContent={[
-                    <Link className="orange-color fz12"  to="/calculator/relax" >
+                  rightContent={
+                    <Link className="orange-color fz12"  to="/account/capitaldetails" >
                             资金明细
                         </Link>
-                  ]}
+                  }
                 >
                     <span className="fz16">总资产</span>
                 </NavBar>

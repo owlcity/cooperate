@@ -16,6 +16,7 @@ import CalcValue from '@/pages/calculator/result';
 import Fail from '@/pages/result/fail';
 import Profit from '@/pages/profit';
 import Total from '@/pages/total';
+import Capitaldetails from '@/pages/capitaldetails';
 
 
 
@@ -41,6 +42,7 @@ class App extends React.Component{
                     <Route path="/calculator/relax" component={Relax} />
                     <Route path="/calculator/result" component={CalcValue} />
                     <Route path="/result/fail" component={Fail} />
+                    <Route path="/account/capitaldetails" component={Capitaldetails} />
                 </div>
             </Router>
         );

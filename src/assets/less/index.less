@@ -52,11 +52,14 @@ table {
 .border-right{
     border-right:1px solid #ededed;
 }
+.border-bottom{
+    border-bottom:1px solid #ededed;
+}
 
 .white-color{color: @white}
 .white-bg{background-color:@white;}
-.bark-color{color:@black;}
-.bark-bg{background-color:@black;}
+.dark-color{color:@black;}
+.dark-bg{background-color:@black;}
 .red-color{color:@red}
 .red-bg{background-color:@red}
 .yellow-color{color:@yellow}
@@ -397,4 +400,25 @@ table {
     width: auto;
     height: 20px;
     margin-right: 8px;
+}
+// 资金明细
+.circle-tab .am-tabs-default-bar-tab-active{
+    background-color: #FFC800;
+    color: #fff;
+    height: 28px;
+    line-height: 28px;
+    width: 19.33%!important;
+    margin: 8px 7%;
+    .radius-circle;
+}
+.circle-tab .am-tabs-default-bar-tab:after,.circle-tab .am-list-line::after{
+    background-color:transparent!important;
+}
+.circle-tab .am-list-item{
+    .border-bottom;
+}
+.circle-tab .am-list-header{
+    .bg-body;
+    .dark-color;
+    .border-bottom;
 }
