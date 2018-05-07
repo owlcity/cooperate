@@ -33,7 +33,7 @@ export default class Project extends React.Component {
                     <div className="tip fz12 margin-top-xs">利率披露不构成对收益的承诺</div>
                     <div className="project-progress margin pr">
                         <Progress className="radius-circle margin-top-xs progress-state-1" percent={45} position="normal"  />
-                        <span className="pro progress-font" style={{"left":"45%"}} >{45}</span>
+                        <span className="pro progress-font" style={{"left":"45%"}} >45%</span>
                     </div>
 
                     <Flex className="item-con margin-top tac">

@@ -73,8 +73,10 @@ export default class Asset extends React.Component{
                         <span className="fz14">回款日历</span>
                     </Item>
                     <Item arrow="horizontal">
-                        <img alt="" src={require("assets/images/icon/lend.png")} />
-                        <span className="fz14">我的出借</span>
+                        <Link to="/account/mylend" >
+                            <img alt="" src={require("assets/images/icon/lend.png")} />
+                            <span className="fz14">我的出借</span>
+                        </Link>
                     </Item>
                     <Item arrow="horizontal">
                         <img alt="" src={require("assets/images/icon/bill.png")} />

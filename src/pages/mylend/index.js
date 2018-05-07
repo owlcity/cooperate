@@ -65,7 +65,7 @@ function genData(pIndex = 0) {
     }
   }
   sectionIDs = [...sectionIDs];
-  rowIDs = [...rowIDs];
+  rowIDs = [...sectionIDs];
 }
 
 
@@ -123,10 +123,10 @@ export default class Mylend extends React.Component{
       }
       const obj = data[index--];
       return (
-        <div key={rowID} className="list-con">
+        <div key={rowID} className="list-con border-bottom">
           <div className="list-con-title">
             <Badge text="暖" hot style={{ marginRight: 10,backgroundColor: '#2181FA',padding: '0 3px' }} />
-            <Link to="/project" >
+            <Link to="/account/mylend/detail" >
                 <strong className="fz14">{obj.title}</strong>
             </Link>
             <div className="tac fr" style={{width:'140px'}}>
