@@ -7,7 +7,7 @@ export default class Mine extends React.Component{
     render(){
         return(
             <div>
-                我的
+                我的11
             </div>
         )
     }

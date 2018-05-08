@@ -1,27 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
-import Tab from '@/pages/tabbar';
-import Project from '@/pages/project';
-import Borrower from '@/pages/project/borrower';
-import Info from '@/pages/project/info';
-import Risk from '@/pages/project/risk';
-import Use from '@/pages/project/use';
-import Records from '@/pages/project/records';
-import Invest from '@/pages/project/invest';
-import InvestSuccess from '@/pages/project/success';
-import Calculator from '@/pages/calculator/major';
-import Relax from '@/pages/calculator/relax';
-import CalcValue from '@/pages/calculator/result';
-import Fail from '@/pages/result/fail';
-import Profit from '@/pages/profit';
-import Total from '@/pages/total';
-import Capitaldetails from '@/pages/capitaldetails';
-import Mylend from '@/pages/mylend';
-import MylendDetail from '@/pages/mylend/detail';
-
+// default
+import Tab from '@/pages/default/tabbar';
+import Project from '@/pages/default/project';
+import Borrower from '@/pages/default/project/borrower';
+import Info from '@/pages/default/project/info';
+import Risk from '@/pages/default/project/risk';
+import Use from '@/pages/default/project/use';
+import Records from '@/pages/default/project/records';
+import Invest from '@/pages/default/project/invest';
+import InvestSuccess from '@/pages/default/project/success';
+import Calculator from '@/pages/default/calculator/major';
+import Relax from '@/pages/default/calculator/relax';
+import CalcValue from '@/pages/default/calculator/result';
+// account
+import Mylend from '@/pages/account/mylend';
+import MylendDetail from '@/pages/account/mylend/detail';
+import Profit from '@/pages/account/profit';
+import Total from '@/pages/account/total';
+import Capitaldetails from '@/pages/account/capitaldetails';
 import Bill from '@/pages/account/bill';
-
+// public
+import Fail from '@/pages/public/result/fail';
 
 
 import "assets/less/index.less";
@@ -40,12 +41,13 @@ class App extends React.Component{
                     <Route path="/project/risk" component={Risk} />
                     <Route path="/project/use" component={Use} />
                     <Route path="/project/records" component={Records} />
-                    <Route path="/profit" component={Profit} />
-                    <Route path="/total" component={Total} />
                     <Route path="/calculator/major" component={Calculator} />
                     <Route path="/calculator/relax" component={Relax} />
                     <Route path="/calculator/result" component={CalcValue} />
                     <Route path="/result/fail" component={Fail} />
+
+                    <Route path="/account/profit" component={Profit} />
+                    <Route path="/account/total" component={Total} />
                     <Route path="/account/capitaldetails" component={Capitaldetails} />
                     <Route exact path="/account/mylend" component={Mylend} />
                     <Route path="/account/mylend/detail" component={MylendDetail} />

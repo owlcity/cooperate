@@ -40,7 +40,7 @@ export default class Asset extends React.Component{
                     <Item multipleLine extra={
                         <div>
                         <Link to="/calculator/major" >
-                            提现
+                            提现1
                         </Link>
                         <span className="gray-color margin-horizontal-xs"> | </span>
                         <Link className="orange-color"  to="/calculator/relax" >
@@ -53,7 +53,7 @@ export default class Asset extends React.Component{
                     </Item>
                     
                     <Item arrow="horizontal">
-                        <Link to="/profit" >
+                        <Link to="/account/profit" >
                             <img alt="" src={require("assets/images/icon/asset.png")} />
                             <span className="fz14">待收收益</span>
                         </Link>
@@ -63,7 +63,7 @@ export default class Asset extends React.Component{
                             102012.89 <span className="fz12 bark-color">元</span>
                         </div>
                     }>
-                        <Link to="/total" >
+                        <Link to="/account/total" >
                             <img alt="" src={require("assets/images/icon/asset.png")} />
                             <span className="fz14">总资产</span>
                         </Link>

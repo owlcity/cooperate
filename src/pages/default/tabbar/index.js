@@ -1,8 +1,8 @@
 import React from 'react';
 import { TabBar } from 'antd-mobile';
-import Lend from '@/pages/lend';
-import Asset from '@/pages/asset';
-import Mine from '@/pages/mine';
+import Lend from '@/pages/default/lend';
+import Asset from '@/pages/account/asset';
+import Mine from '@/pages/account/mine';
 import { Modal,Button } from 'antd-mobile';
 
 // 对话框
