@@ -37,6 +37,9 @@ table {
 .circle{
     .border-radius(50%);
 }
+.round{
+    .border-radius(100px);
+}
 .radius-2{
     .border-radius(2px);
 }
@@ -70,6 +73,7 @@ table {
 .green-bg{background-color:@green}
 .gray-color{color:@gray}
 .gray-bg{background-color:@gray}
+.darkgray-bg{background-color:rgb(83,86,93)}
 .lightgrey-color{color:@lightgrey}
 .lightgrey-bg{background-color:@lightgrey}
 .success-bg{background-color:#c86854}
@@ -443,4 +447,36 @@ table {
     margin:10px 15px 15px;
     padding:5px 10px;
     .border-radius(7px);
+}
+// 账单
+.bill-detail{
+    padding:0;
+}
+.bill-list{
+    padding: 30px 15px 0;
+    margin: 0 10px;
+}
+.bill-title{
+    .pr;
+    .tac;
+    border-radius:8px 8px 0 0;
+    padding: 13px;
+    background-color: #F5F5F5;
+}
+.bill-title:before,.bill-title:after{
+    content:"";
+    .pa;
+    .circle;
+    width: 14px;
+    height: 14px;
+    background-color: rgb(83,86,93);
+    bottom: -7px;
+    left: -7px;
+}
+.bill-title:after{
+    left: auto;
+    right: -7px;
+}
+.bill-title img{
+    margin-top: -20px;
 }

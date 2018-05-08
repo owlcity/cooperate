@@ -3,8 +3,7 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { NavBar,Icon,Button,Progress,Flex,Badge,WhiteSpace,List } from 'antd-mobile';
-import Statement from 'components/statement';
+import { NavBar,Icon,Button,Progress,Flex,Badge,List } from 'antd-mobile';
 const Item = List.Item;
 
 export default class MylendDetal extends React.Component {
