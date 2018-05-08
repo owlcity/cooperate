@@ -19,6 +19,7 @@ import Total from '@/pages/total';
 import Capitaldetails from '@/pages/capitaldetails';
 import Mylend from '@/pages/mylend';
 import MylendDetail from '@/pages/mylend/detail';
+
 import Bill from '@/pages/account/bill';
 
 
