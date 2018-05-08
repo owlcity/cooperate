@@ -79,8 +79,10 @@ export default class Asset extends React.Component{
                         </Link>
                     </Item>
                     <Item arrow="horizontal">
-                        <img alt="" src={require("assets/images/icon/bill.png")} />
-                        <span className="fz14">我的账单</span>
+                    <Link to="/account/bill" >
+                            <img alt="" src={require("assets/images/icon/bill.png")} />
+                            <span className="fz14">我的账单</span>
+                        </Link>
                     </Item>
                 </List>
                 <WhiteSpace className="bg-body" size="lg" />

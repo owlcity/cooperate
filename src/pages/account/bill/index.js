@@ -4,6 +4,7 @@
 import React from 'react';
 import { Picker,NavBar,Icon } from 'antd-mobile';
 import { createForm } from 'rc-form';
+import LinkImg from 'components/linkimg';
 
 const district =  [
     {
@@ -70,6 +71,13 @@ class Billform extends React.Component {
                         </div>
                     </div>
 
+                    <div className="padding-sm">
+                      <LinkImg 
+                        link="https://m.jylc168.com/disclosure"
+                        src={require("assets/images/account/autoinvest.png")}
+                        width="100%"
+                     />
+                    </div>
                 </div>
 
 

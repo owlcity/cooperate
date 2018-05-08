@@ -8,7 +8,7 @@ import { NavBar,Icon } from 'antd-mobile';
 export default class CalcValue extends React.Component{
     render(){
         return(
-            <div className="bark-bg padding-bottom-sm">
+            <div className="dark-bg padding-bottom-sm">
                 <NavBar
                   mode="dark"
                   icon={<Icon type="cross" />}
