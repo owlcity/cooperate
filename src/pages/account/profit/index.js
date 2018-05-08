@@ -31,11 +31,11 @@ export default class Profit extends React.Component{
                 <List className="list my-list fz14">
                     <Item multipleLine extra={
                         <div>
-                        <Link to="/calculator/major" >
+                        <Link to="/account/withdraw" >
                             提现
                         </Link>
                         <span className="gray-color margin-horizontal-xs"> | </span>
-                        <Link className="orange-color"  to="/calculator/relax" >
+                        <Link className="orange-color"  to="/account/charge" >
                             充值
                         </Link>
                         </div>

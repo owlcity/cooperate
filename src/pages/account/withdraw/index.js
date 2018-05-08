@@ -21,7 +21,7 @@ const Brief = Item.Brief;
                   onLeftClick={() => window.history.go(-1)}
                   
                 >
-                    <span className="fz16 ">充值</span>
+                    <span className="fz16 ">提现</span>
                 </NavBar>
                 <BankNotice />
                 <List className="my-list">
