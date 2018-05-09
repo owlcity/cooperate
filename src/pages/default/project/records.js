@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { NavBar,Icon,WhiteSpace,List } from 'antd-mobile';
-import Statement from 'components/statement';
+import Statement from 'components/statement/risknotice';
 const Item = List.Item;
 const Brief = Item.Brief;
 

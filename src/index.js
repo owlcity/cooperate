@@ -23,6 +23,7 @@ import Capitaldetails from '@/pages/account/capitaldetails';
 import Bill from '@/pages/account/bill';
 import Charge from '@/pages/account/charge';
 import Withdraw from '@/pages/account/withdraw';
+import WithdrawBack from '@/pages/account/withdraw/callback';
 // public
 import Fail from '@/pages/public/result/fail';
 
@@ -55,7 +56,8 @@ class App extends React.Component{
                     <Route path="/account/mylend/detail" component={MylendDetail} />
                     <Route path="/account/bill" component={Bill} />
                     <Route path="/account/charge" component={Charge} />
-                    <Route path="/account/withdraw" component={Withdraw} />
+                    <Route exact path="/account/withdraw" component={Withdraw} />
+                    <Route path="/account/withdraw/callback" component={WithdrawBack} />
                 </div>
             </Router>
         );

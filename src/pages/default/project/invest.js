@@ -5,6 +5,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Flex,List,InputItem,NavBar,Icon,WhiteSpace,Picker,Switch } from 'antd-mobile';
 import { createForm } from 'rc-form';
+import AgreeProtocal from 'components/statement/agreeprotocal';
 const Item = List.Item;
 
 const cashticket =  [
@@ -95,9 +96,8 @@ class InvestPage extends React.Component{
                         </Item>
                     </List>
                 </div>
-                <div className="padding bg-body">
-                    <Icon className="icon padding-right-xs" type="check-circle" size="xxs" color="#6fd35e" />
-                    我已同意xxxx
+                <div className="bg-body">
+                    <AgreeProtocal txt="xxx协议" protocal=""  />
                 </div>
                 <div className="tip-suggest tac">市场有风险，出借需谨慎</div>
                 <div className="padding-sm">

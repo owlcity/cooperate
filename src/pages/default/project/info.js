@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { NavBar,Icon,WhiteSpace } from 'antd-mobile';
-import Statement from 'components/statement';
+import Statement from 'components/statement/risknotice';
 
 
 export default class Info extends React.Component{

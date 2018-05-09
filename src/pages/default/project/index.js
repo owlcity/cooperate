@@ -4,7 +4,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { NavBar,Icon,Progress,Flex,Badge,WhiteSpace,List } from 'antd-mobile';
-import Statement from 'components/statement';
+import Statement from 'components/statement/risknotice';
 const Item = List.Item;
 
 export default class Project extends React.Component {
