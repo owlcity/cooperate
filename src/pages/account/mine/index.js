@@ -3,65 +3,79 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Flex,Grid,WhiteSpace } from 'antd-mobile';
+import { Flex,Grid,Badge,WhiteSpace } from 'antd-mobile';
 
 const data1 = [
     {
       icon: require('assets/images/icon/mine_icon1.png'),
+      link: '',
       text: '每日签到'
     },
     {
       icon: require('assets/images/icon/mine_icon2.png'),
+      link: '',
       text: '萌宠'
     },
     {
       icon: require('assets/images/icon/mine_icon3.png'),
+      link: '',
       text: '奖品'
     },
     {
       icon: require('assets/images/icon/mine_icon4.png'),
+      link: '',
       text: '自动出借'
     },
     {
       icon: require('assets/images/icon/mine_icon5.png'),
+      link: '',
       text: '风险评估'
     },
     {
       icon: require('assets/images/icon/mine_icon6.png'),
+      link: '',
       text: '好友推荐'
     },
     {
       icon: require('assets/images/icon/mine_icon7.png'),
+      link: '',
       text: '任务中心'
     },
     {
       icon: require('assets/images/icon/mine_icon8.png'),
+      link: '',
       text: '金币商城'
     },
     {
       icon: require('assets/images/icon/mine_icon9.png'),
+      link: '',
       text: '电子签名'
     },
     {
       icon: require('assets/images/icon/mine_icon10.png'),
+      link: '/account/bankcard',
       text: '银行卡'
     }
 ]
 const data2 = [
     {
       icon: require('assets/images/icon/mine_logo.png'),
+      link: '',
       text: '关于我们'
     },
     {
       icon: require('assets/images/icon/mine_intr.png'),
+      link: '',
       text: '产品介绍'
     },
     {
       icon: require('assets/images/icon/mine_policy.png'),
+      link: '',
       text: '监管政策'
     },
     {
       icon: require('assets/images/icon/mine_help.png'),
+      link: '',
       text: '帮助中心'
     }
 ]
@@ -72,8 +86,12 @@ export default class Mine extends React.Component{
             <div>
                 <div className="vulgar-gardient">
                     <div className="padding-sm tar">
+                    <Badge dot>
                         <img alt="" height="20" src={require('assets/images/icon/set_white.svg')} />
+                        
                         <img className="margin-left-sm" alt="" height="20" src={require('assets/images/icon/mail_white.svg')} />
+
+                        </Badge>
                     </div>
                     <Flex>
                         <div className="flex-center" style={{"width":"80px"}}>
@@ -128,14 +146,16 @@ export default class Mine extends React.Component{
                   itemStyle={{'borderTop':'1px solid #EAE5E4'}}
                   renderItem={dataItem => (
                     <div className="grid-item am-grid-item-inner-content">
-                      <img src={dataItem.icon} alt="" />
-                      <div className="margin-top-xs">
-                        <span>{dataItem.text}</span>
-                      </div>
+                      <Link to={dataItem.link}>
+                        <img src={dataItem.icon} alt="" />
+                        <div className="margin-top-xs">
+                          <span>{dataItem.text}</span>
+                        </div>
+                      </Link>
                     </div>
                   )}
                 />
-                <WhiteSpace size="md" />
+                <WhiteSpace size="sm" />
                 <Grid data={data2}
                   columnNum={4}
                   hasLine={false}

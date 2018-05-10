@@ -24,6 +24,12 @@ import Bill from '@/pages/account/bill';
 import Charge from '@/pages/account/charge';
 import Withdraw from '@/pages/account/withdraw';
 import WithdrawBack from '@/pages/account/withdraw/callback';
+import BankCard from '@/pages/account/bankcard';
+import GoldCoin from '@/pages/account/goldcoin';
+import GoldCoinDetail from '@/pages/account/goldcoin/detail';
+import Setting from '@/pages/account/setting';
+
+
 // public
 import Fail from '@/pages/public/result/fail';
 
@@ -58,6 +64,12 @@ class App extends React.Component{
                     <Route path="/account/charge" component={Charge} />
                     <Route exact path="/account/withdraw" component={Withdraw} />
                     <Route path="/account/withdraw/callback" component={WithdrawBack} />
+                    <Route path="/account/bankcard" component={BankCard} />
+                    <Route exact path="/account/goldcoin" component={GoldCoin} />
+                    <Route path="/account/goldcoin/detail" component={GoldCoinDetail} />
+                    <Route path="/account/setting" component={Setting} />
+
+
                 </div>
             </Router>
         );
