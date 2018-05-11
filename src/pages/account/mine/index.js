@@ -87,8 +87,9 @@ export default class Mine extends React.Component{
                 <div className="vulgar-gardient">
                     <div className="padding-sm tar">
                     <Badge dot>
+                        <Link to="/account/setting">
                         <img alt="" height="20" src={require('assets/images/icon/set_white.svg')} />
-                        
+                        </Link>
                         <img className="margin-left-sm" alt="" height="20" src={require('assets/images/icon/mail_white.svg')} />
 
                         </Badge>
@@ -129,7 +130,9 @@ export default class Mine extends React.Component{
                 </Flex>
                 <div className="white-bg">
                     <div className="padding-sm tar">
+                      <Link to="/account/setting">
                         <img alt="" height="20" src={require('assets/images/icon/set_dark.svg')} />
+                        </Link>
                         <img className="margin-left-sm" alt="" height="20" src={require('assets/images/icon/mail_dark.svg')} />
                     </div>
                     <div className="padding padding-top-0 tac">

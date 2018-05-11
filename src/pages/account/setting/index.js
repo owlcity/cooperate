@@ -20,7 +20,7 @@ export default class Setting extends React.Component{
                     <span className="fz16 ">设置</span>
                 </NavBar>
                 <WhiteSpace className="bg-body" size="sm" />
-                <List className="list">
+                <List className="list border-list">
                     <Item arrow="horizontal" extra={
                         <span className="fz14">修改</span>
                     }>
@@ -37,7 +37,7 @@ export default class Setting extends React.Component{
                     </Item>
                 </List>
                 <WhiteSpace className="bg-body" size="sm" />
-                <List className="list">
+                <List className="list border-list">
                     <Item arrow="horizontal" extra={
                         <span className="fz14">添加/修改</span>
                     }>
@@ -50,11 +50,28 @@ export default class Setting extends React.Component{
                         意见反馈
                         </Link>
                     </Item>
-                    <Item arrow="horizontal">
+                    
+                </List>
+                <WhiteSpace className="bg-body" size="lg" />
+                <List className="list border-list">
+                    <Item arrow="horizontal" extra={
+                        <span className="orange-color fz14">立即开启</span>
+                    }>
                         <Link to="/project/info">
                         微信消息
                         </Link>
                     </Item>
+                </List>
+                    <div className="lightgrey-color padding-sm line-height taj">
+                        绑定微信服务号，及时掌握每笔资金动向，体验一站式尊贵服务。<br/>
+1. 开启 “微信消息” 后， 将自动为您复制囧羊理财官方微信账号到您
+的手机；<br/>
+2. 打开微信——添加朋友 ——搜索栏中粘贴囧羊理财服务号——在结
+果页中关注我们；<br/>
+3. 开启“微信消息”， 打开新世界的大门。
+                    </div>
+                <WhiteSpace className="bg-body" size="lg" />
+                <List className="list border-list">
                     <Item arrow="horizontal" extra={
                         <span className="fz14">1.01</span>
                     }>
