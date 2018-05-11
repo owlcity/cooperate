@@ -97,7 +97,6 @@ const district =  [
                         </div>
                     </List>
                     <div className="padding-sm padding-bottom-xl">
-
                         <Link to="/calculator/result" className="btn-lg yellow-bg">
                             开始计算
                         </Link>

@@ -39,7 +39,7 @@ export default class Setting extends React.Component{
                 <WhiteSpace className="bg-body" size="sm" />
                 <List className="list border-list">
                     <Item arrow="horizontal" extra={
-                        <span className="fz14">添加/修改</span>
+                        <Link to="/account/setting/address" className="fz14">添加/修改</Link>
                     }>
                         <Link to="/project/borrower">
                          地址

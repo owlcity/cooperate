@@ -28,6 +28,9 @@ import BankCard from '@/pages/account/bankcard';
 import GoldCoin from '@/pages/account/goldcoin';
 import GoldCoinDetail from '@/pages/account/goldcoin/detail';
 import Setting from '@/pages/account/setting';
+import Passwords from '@/pages/account/setting/password';
+import Address from '@/pages/account/setting/address';
+import EditAddress from '@/pages/account/setting/editaddress';
 
 
 // public
@@ -67,7 +70,10 @@ class App extends React.Component{
                     <Route path="/account/bankcard" component={BankCard} />
                     <Route exact path="/account/goldcoin" component={GoldCoin} />
                     <Route path="/account/goldcoin/detail" component={GoldCoinDetail} />
-                    <Route path="/account/setting" component={Setting} />
+                    <Route exact path="/account/setting" component={Setting} />
+                    <Route path="/account/setting/password" component={Passwords} />
+                    <Route path="/account/setting/address" component={Address} />
+                    <Route path="/account/setting/editaddress" component={EditAddress} />
 
 
                 </div>
