@@ -583,3 +583,59 @@ table {
 .border-list .am-list-line{
     padding:0 15px;
 }
+// 我的卡券
+.flex-left{width: 100px;.tac}
+.ticket-list{
+    position: relative;
+    .border-radius(3px);
+    box-shadow:0 1px 5px #e8e5e5; ;
+}
+.ticket-list:after{
+    content:"";
+    position: absolute;
+    width: 2px;
+    height: 80%;
+    top: 10%;
+    left: 1px;
+    
+}
+.red-border{
+    &:after{
+        background-color: #F96142;
+    }
+    .ticket-text{
+        color: #F96142;
+    }
+}
+.purple-border{
+    &:after{
+        background-color: #8440f7;
+    }
+    .ticket-text{
+        color: #8440f7
+    }
+}
+.blue-border{
+    &:after{
+        background-color: #1B7BF1;
+    }
+    .ticket-text{
+        color: #1B7BF1
+    }
+}
+.invalid-list:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.4);
+}
+.invalid-icon{
+    position: absolute;
+    width: 62px;
+    right: 15px;
+    top: 18px;
+}
+

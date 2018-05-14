@@ -33,6 +33,8 @@ import Passwords from '@/pages/account/setting/password';
 import Address from '@/pages/account/setting/address';
 import EditAddress from '@/pages/account/setting/editaddress';
 import Personal from '@/pages/account/setting/personal';
+import Tickets from '@/pages/account/tickets';
+import TicketsInvalid from '@/pages/account/tickets/invalid';
 
 
 // public
@@ -78,6 +80,9 @@ class App extends React.Component{
                     <Route path="/account/setting/address" component={Address} />
                     <Route path="/account/setting/editaddress" component={EditAddress} />
                     <Route path="/account/setting/personal" component={Personal} />
+                    <Route exact path="/account/tickets" component={Tickets} />
+                    <Route path="/account/tickets/invalid" component={TicketsInvalid} />
+
 
 
                 </div>

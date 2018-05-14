@@ -38,6 +38,11 @@ export default class Setting extends React.Component{
                 </List>
                 <WhiteSpace className="bg-body" size="sm" />
                 <List className="list border-list">
+                    <Item arrow="horizontal">
+                        <Link to="/account/setting/personal">
+                        个人信息
+                        </Link>
+                    </Item>
                     <Item arrow="horizontal" extra={
                         <Link to="/account/setting/address" className="fz14">添加/修改</Link>
                     }>
@@ -45,12 +50,6 @@ export default class Setting extends React.Component{
                          地址
                         </Link>
                     </Item>
-                    <Item arrow="horizontal">
-                        <Link to="/project/info">
-                        意见反馈
-                        </Link>
-                    </Item>
-                    
                 </List>
                 <WhiteSpace className="bg-body" size="lg" />
                 <List className="list border-list">

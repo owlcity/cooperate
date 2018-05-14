@@ -37,7 +37,7 @@ export default class ItemList extends React.Component{
                     </Flex.Item>
                     <Flex.Item>
                         <div className="inline-block item-top" style={{width:"80px"}} >
-                            <Link className="btn-sm yellow-bg"  to="/project" >
+                            <Link className=""  to="/project" >
                             出借
                             </Link>
                             <Button className="orange-bg btn-sm" type="primary">15:00发布</Button>

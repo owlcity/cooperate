@@ -2,7 +2,6 @@
  * Created by zk on 2018/05/14
  */
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { NavBar,Icon,List,WhiteSpace,InputItem } from 'antd-mobile';
 import { createForm } from 'rc-form';
 const Item = List.Item;
