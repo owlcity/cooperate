@@ -90,8 +90,9 @@ export default class Mine extends React.Component{
                         <Link to="/account/setting">
                         <img alt="" height="20" src={require('assets/images/icon/set_white.svg')} />
                         </Link>
+                        <Link to="/account/msg">
                         <img className="margin-left-sm" alt="" height="20" src={require('assets/images/icon/mail_white.svg')} />
-
+                        </Link>
                         </Badge>
                     </div>
                     <Flex>
@@ -133,7 +134,9 @@ export default class Mine extends React.Component{
                       <Link to="/account/setting">
                         <img alt="" height="20" src={require('assets/images/icon/set_dark.svg')} />
                         </Link>
+                        <Link to="/account/msg">
                         <img className="margin-left-sm" alt="" height="20" src={require('assets/images/icon/mail_dark.svg')} />
+                        </Link>
                     </div>
                     <div className="padding padding-top-0 tac">
                         <h2 className="red-color">注册送大礼包</h2>
