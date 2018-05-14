@@ -43,7 +43,24 @@ table {
 .radius-2{
     .border-radius(2px);
 }
-
+.radius-3{
+    .border-radius(3px);
+}
+.radius-5{
+    .border-radius(5px);
+}
+.line-clamp(@lines, @line-height: 1.6em) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @lines; // number of lines to show
+  overflow: hidden;
+  line-height: @line-height;
+  max-height: @line-height * @lines;
+}
+.line-clamp-3{
+    .line-clamp(3);
+}
 
 .tac{text-align: center!important;}
 .tal{text-align: left!important;}
@@ -637,5 +654,17 @@ table {
     width: 62px;
     right: 15px;
     top: 18px;
+}
+pre { 
+.taj;
+line-height: 1.8;
+white-space: pre-wrap; /*css-3*/ 
+white-space: -moz-pre-wrap; /*Mozilla,since1999*/ 
+white-space: -pre-wrap; /*Opera4-6*/ 
+white-space: -o-pre-wrap; /*Opera7*/ 
+word-wrap: break-word; /*InternetExplorer5.5+*/ 
+} 
+.mt3{
+    margin-top: 3px;
 }
 

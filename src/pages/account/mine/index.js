@@ -18,7 +18,7 @@ const data1 = [
     },
     {
       icon: require('assets/images/icon/mine_icon3.png'),
-      link: '',
+      link: '/account/prize',
       text: '奖品'
     },
     {
