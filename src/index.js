@@ -14,6 +14,7 @@ import InvestSuccess from '@/pages/default/project/success';
 import Calculator from '@/pages/default/calculator/major';
 import Relax from '@/pages/default/calculator/relax';
 import CalcValue from '@/pages/default/calculator/result';
+import Version from '@/pages/default/version';
 // account
 import Mylend from '@/pages/account/mylend';
 import MylendDetail from '@/pages/account/mylend/detail';
@@ -31,6 +32,7 @@ import Setting from '@/pages/account/setting';
 import Passwords from '@/pages/account/setting/password';
 import Address from '@/pages/account/setting/address';
 import EditAddress from '@/pages/account/setting/editaddress';
+import Personal from '@/pages/account/setting/personal';
 
 
 // public
@@ -57,6 +59,7 @@ class App extends React.Component{
                     <Route path="/calculator/relax" component={Relax} />
                     <Route path="/calculator/result" component={CalcValue} />
                     <Route path="/result/fail" component={Fail} />
+                    <Route path="/version" component={Version} />
 
                     <Route path="/account/profit" component={Profit} />
                     <Route path="/account/total" component={Total} />
@@ -74,6 +77,7 @@ class App extends React.Component{
                     <Route path="/account/setting/password" component={Passwords} />
                     <Route path="/account/setting/address" component={Address} />
                     <Route path="/account/setting/editaddress" component={EditAddress} />
+                    <Route path="/account/setting/personal" component={Personal} />
 
 
                 </div>

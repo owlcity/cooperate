@@ -73,7 +73,9 @@ export default class Setting extends React.Component{
                 <WhiteSpace className="bg-body" size="lg" />
                 <List className="list border-list">
                     <Item arrow="horizontal" extra={
-                        <span className="fz14">1.01</span>
+                        <Link to="/version">
+                            1.01
+                        </Link>
                     }>
                         版本信息
                     </Item>

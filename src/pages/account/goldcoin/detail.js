@@ -19,7 +19,7 @@ export default class GoldCoinDetail extends React.Component{
                 >
                     <span className="fz16 ">金币明细</span>
                 </NavBar>
-                <List className="border-list fz14 full">
+                <List className="fz14 full">
                   <Item
                     multipleLine
                     extra={
