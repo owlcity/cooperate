@@ -3,9 +3,7 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { NavBar,Icon,Tabs,List } from 'antd-mobile';
-const Item = List.Item;
-const Brief = Item.Brief;
+import { NavBar,Icon,Tabs } from 'antd-mobile';
 
 const tabs = [
   { title: '公告' },

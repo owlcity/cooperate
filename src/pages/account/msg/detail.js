@@ -2,7 +2,7 @@
  * Created by zk on 2018/5/14
  */
 import React from 'react';
-import { NavBar,Icon,Tabs,List } from 'antd-mobile';
+import { NavBar,Icon } from 'antd-mobile';
 
 export default class Msg extends React.Component{
     

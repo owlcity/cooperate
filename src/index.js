@@ -38,6 +38,7 @@ import TicketsInvalid from '@/pages/account/tickets/invalid';
 import Prize from '@/pages/account/prize';
 import Msg from '@/pages/account/msg';
 import MsgDetail from '@/pages/account/msg/detail';
+import Login from '@/pages/account/login';
 
 
 
@@ -89,6 +90,8 @@ class App extends React.Component{
                     <Route exact path="/account/prize" component={Prize} />
                     <Route exact path="/account/msg" component={Msg} />
                     <Route path="/account/msg/detail" component={MsgDetail} />
+                    <Route path="/account/login" component={Login} />
+
 
 
 
