@@ -133,6 +133,9 @@ table {
 .line-height{
     line-height: 1.6;
 }
+.line-height-18{
+    line-height: 1.8;
+}
 .margin{margin:1.6rem}
 .margin-0{margin:0!important}
 
@@ -352,12 +355,10 @@ table {
 }
 // 项目详情
 .project-table table tr td{
-    border: 1px solid #ececec;
-    padding: 10px;
+    padding: 15px 0;
     .taj;
 }
-.project-table table tr:nth-of-type(odd){
-    background-color: #fafafa;
+.project-table table tr td:nth-of-type(odd){
     color: #999;
 }
 .extra-color{
@@ -667,4 +668,18 @@ word-wrap: break-word; /*InternetExplorer5.5+*/
 .mt3{
     margin-top: 3px;
 }
-
+.icon-title{position: relative;font-weight: 700;padding: 10px 0;}
+.icon-title:before{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 60px;
+    background-color:#FFC800;
+}
+.icon-title-img{
+    width: 15px;
+    padding-right: 10px;
+    vertical-align: -2px;
+}

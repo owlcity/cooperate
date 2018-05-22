@@ -92,10 +92,6 @@ class App extends React.Component{
                     <Route path="/account/msg/detail" component={MsgDetail} />
                     <Route path="/account/login" component={Login} />
 
-
-
-
-
                 </div>
             </Router>
         );
