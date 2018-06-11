@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 // default
-import Tab from '@/pages/default/tabbar';
+// import Tab from '@/pages/default/tabbar';
+import Lend from '@/pages/default/lend';
 import Project from '@/pages/default/project';
 import Borrower from '@/pages/default/project/borrower';
 import Info from '@/pages/default/project/info';
@@ -16,6 +17,8 @@ import Relax from '@/pages/default/calculator/relax';
 import CalcValue from '@/pages/default/calculator/result';
 import Version from '@/pages/default/version';
 // account
+import Asset from '@/pages/account/asset';
+import Mine from '@/pages/account/mine';
 import Mylend from '@/pages/account/mylend';
 import MylendDetail from '@/pages/account/mylend/detail';
 import Profit from '@/pages/account/profit';
@@ -53,7 +56,10 @@ class App extends React.Component{
         return(
             <Router>
                 <div>
-                    <Route exact path="/" component={Tab} />
+                    <Route exact path="/" component={Lend} />
+                    <Route path="/index" component={Lend} />
+                    
+
                     <Route exact path="/project" component={Project} />
                     <Route path="/project/invest" component={Invest} />
                     <Route path="/project/success" component={InvestSuccess} />
@@ -68,6 +74,9 @@ class App extends React.Component{
                     <Route path="/result/fail" component={Fail} />
                     <Route path="/version" component={Version} />
 
+                    <Route path="/account/asset" component={Asset} />
+                    <Route path="/account/mine" component={Mine} />
+                    <Route path="/account/profit" component={Profit} />
                     <Route path="/account/profit" component={Profit} />
                     <Route path="/account/total" component={Total} />
                     <Route path="/account/capitaldetails" component={Capitaldetails} />

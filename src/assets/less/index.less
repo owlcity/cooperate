@@ -8,7 +8,7 @@ body{background-color: #f5f5fa;color: #333}
 .bg-body{background-color:#f5f5fa};
 .full{width: 100%;}
 a{
-       color: #333; 
+       color: #333;
 }
 table {
     border-collapse: collapse;
@@ -226,14 +226,27 @@ table {
     vertical-align: -3px; //出现文字与icon 上下对其
 }
 // tabbar
-.tabbar{position: fixed; height:100%;;width:100%;top: 0}
-.tab-icon{width: 21px;height: 21px;background-position: 50% 50%;background-repeat:no-repeat;background-size:100% 100%;}
+.u-tab{
+    position: fixed;
+    height: 40px;
+    padding: 7px 0;
+    border-top:1px solid #ddd;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    background-color: #FFF;
+    z-index: 100;
+}
+.u-tab .am-flexbox-item{text-align: center}
+.tab-icon{display: inline-block;margin-bottom: 2px;width: 21px;height: 21px;background-position: 50% 50%;background-repeat:no-repeat;background-size:100% 100%;}
+.u-tab-on .u-tab-text{color: #FFC800}
 .tab-icon1{background-image: url(../images/tabbar/lend_1.png);}
-.tab-on-icon1{background-image: url(../images/tabbar/lend_2.png);}
+.u-tab-on .tab-icon1{background-image: url(../images/tabbar/lend_2.png);}
 .tab-icon2{background-image: url(../images/tabbar/asset_1.png);}
-.tab-on-icon2{background-image: url(../images/tabbar/asset_2.png);}
+.u-tab-on .tab-on-icon2{background-image: url(../images/tabbar/asset_2.png);}
 .tab-icon3{background-image: url(../images/tabbar/mine_1.png);}
-.tab-on-icon3{background-image: url(../images/tabbar/mine_2.png);}
+.u-tab-on .tab-on-icon3{background-image: url(../images/tabbar/mine_2.png);}
 // 出借
 .train-con{
     .red-color;
@@ -420,7 +433,7 @@ table {
     padding: 10px;
     margin-top: -10px;
     box-shadow: 0 0 3px #ff7800;
-}   
+}
 .list .am-list-item img{
     width: auto;
     height: 20px;
@@ -450,7 +463,7 @@ table {
 // 我的出借
 .list-con{
     padding:20px 15px;
-    
+
 }
 .list-con-title{
     height: 42px;
@@ -615,7 +628,7 @@ table {
     height: 80%;
     top: 10%;
     left: 1px;
-    
+
 }
 .red-border{
     &:after{
@@ -656,15 +669,15 @@ table {
     right: 15px;
     top: 18px;
 }
-pre { 
+pre {
 .taj;
 line-height: 1.8;
-white-space: pre-wrap; /*css-3*/ 
-white-space: -moz-pre-wrap; /*Mozilla,since1999*/ 
-white-space: -pre-wrap; /*Opera4-6*/ 
-white-space: -o-pre-wrap; /*Opera7*/ 
-word-wrap: break-word; /*InternetExplorer5.5+*/ 
-} 
+white-space: pre-wrap; /*css-3*/
+white-space: -moz-pre-wrap; /*Mozilla,since1999*/
+white-space: -pre-wrap; /*Opera4-6*/
+white-space: -o-pre-wrap; /*Opera7*/
+word-wrap: break-word; /*InternetExplorer5.5+*/
+}
 .mt3{
     margin-top: 3px;
 }
@@ -683,3 +696,5 @@ word-wrap: break-word; /*InternetExplorer5.5+*/
     padding-right: 10px;
     vertical-align: -2px;
 }
+// tabbar
+

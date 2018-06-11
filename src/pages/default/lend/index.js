@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import { WhiteSpace } from 'antd-mobile';
+import Tab from '@/pages/default/tabbar';
 import ImgCarousel from 'components/carousel';
 import LinkImg from 'components/linkimg';
 import TrainCamp from 'components/traincamp';
@@ -26,6 +27,7 @@ export default class Lend extends React.Component{
                 <ItemList />
                 <ItemList />
                 <div className="tac fz12 green-color padding-vertical-sm">银行全程提供资金托管</div>
+                <Tab />
             </div>
         )
     }

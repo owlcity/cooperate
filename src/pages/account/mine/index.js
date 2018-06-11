@@ -4,6 +4,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Flex,Grid,Badge,WhiteSpace } from 'antd-mobile';
+import Tab from '@/pages/default/tabbar';
 
 const data1 = [
     {
@@ -176,6 +177,7 @@ export default class Mine extends React.Component{
                 />
                 <WhiteSpace size="md" />
 
+                <Tab />
 
             </div>
         )
